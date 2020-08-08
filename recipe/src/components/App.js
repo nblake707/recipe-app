@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
+import SideBar from './SideBar';
+import Main from './Main';
 
 class App extends React.Component {
-
-
-    render(){
-        return (
-            <h1>Hello There!</h1>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <SideBar />
+        <Main />
+      </div>
+    );
+  }
 }
 
 export default App;

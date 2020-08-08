@@ -1,3 +1,29 @@
+@font-face {
+    font-family: "YoungSerif";
+    src: url("../fonts/YoungSerif-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 nav {
     position: fixed;
+    top:0;
+    left:0;
+    width: 240px;
+    height: 100vh;
+    background-color: #ffc196;
+    color: #ffffff;
+
+    font-family: "YoungSerif";
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 5px 32px;
 }
