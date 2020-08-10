@@ -2,6 +2,7 @@ import React from "react";
 import './Main.css';
 import Menu from '../images/menu.svg';
 import Close from '../images/close.svg';
+import WelcomeSection from "./WelcomeSection";
 
 class Main extends React.Component {
 
@@ -15,16 +16,13 @@ class Main extends React.Component {
         this.setState({
             showMenu: !this.state.showMenu
         })
-
-        console.log(this.state.showMenu);
         
     }
 
 render (){
     const menuVis = this.state.showMenu ? 'open' : '';
-    const imageSrc = this.state.mainClass == "open" ? Close : Menu;
-
-
+    const imageSrc = this.state.showMenu ? Close : Menu;
+    const menuText = this.state.showMenu ? 'Close' : 'Open';
 
     return (
         <main className={menuVis}>
@@ -34,8 +32,9 @@ render (){
               src={imageSrc} 
               alt="menu icon" 
             />
-            {/* {this.state.mainClass ==  "open" ? "Close" : "Menu"} */}
+            {menuText}
           </a>
+          <WelcomeSection />
         </main>
       );
 }

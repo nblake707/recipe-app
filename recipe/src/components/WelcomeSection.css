@@ -1,0 +1,29 @@
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+section div {
+    width: 350px;
+}
+
+h1 {
+    font-family: "YoungSerif";
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin: 20px 0 20px 0;
+  }
+
+  a.button {
+      display: inline-block;
+      background-color: #ffc196;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px 10px 15px;
+      border-radius: 3px;
+  }
