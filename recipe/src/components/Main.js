@@ -3,6 +3,7 @@ import './Main.css';
 import Menu from '../images/menu.svg';
 import Close from '../images/close.svg';
 import WelcomeSection from "./WelcomeSection";
+import SearchSection from './SearchSection';
 
 class Main extends React.Component {
 
@@ -35,6 +36,7 @@ render (){
             {menuText}
           </a>
           <WelcomeSection />
+          <SearchSection />
         </main>
       );
 }

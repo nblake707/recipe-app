@@ -5,8 +5,8 @@ const SideBar = () => {
 
     return (
         <nav>
-            <a>Home</a>
-            <a>Search</a>
+            <a href="#home">Home</a>
+            <a href="#search">Search</a>
         </nav>
     )
 

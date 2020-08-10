@@ -1,26 +1,23 @@
 import React from "react";
-import './WelcomeSection.css';
+import "./WelcomeSection.css";
+import FoodPic from "../images/orange.jpg";
 
 const WelcomeSection = () => {
   return (
-    <section id="home">
+    <section className='welcome' id="home">
+      <div className="pic">
+        <img src={FoodPic}></img>
+      </div>
 
-        <div>
-
-        </div>
       <div className="content">
         <h1>Tasty Recipes</h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Welcome to the recipe app. Click below to find some inspiraton.
         </p>
-        <a href="#search" className ="button">Search Recipes</a>
+        <a href="#search" className="button">
+          Search Recipes
+        </a>
       </div>
     </section>
   );
