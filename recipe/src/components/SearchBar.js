@@ -2,26 +2,34 @@ import React from "react";
 import "./SearchBar.css";
 
 export default class SearchBar extends React.Component {
+  state = {
+    term: "",
+  };
 
-    state = {
-        term: ''
-    }
+  onInputChange = (e) => {
+    this.setState({ term: e.target.value });
+  };
 
-    onSearchSubmit = (e) => {
-
-    }
+  onSearchSubmit = (e) => {
+    e.preventDefault();
+    this.props.onSubmit(this.state.term);
+  };
 
   render() {
-    return (
-        <form>
-            <label>
-                <div className="field">
+    const inputStyle = {
+      borderRadius: "500rem",
+    };
 
-                </div>
-                <input></input>
-            </label>
-        </form>
-  
+    return (
+      <form className="ui form">
+        <div className="field">
+          <input
+            type="text"
+            style={inputStyle}
+            onChange={this.onInputChange}
+          ></input>
+        </div>
+      </form>
     );
   }
 }
