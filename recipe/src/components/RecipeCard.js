@@ -1,25 +1,23 @@
 import React from "react";
 
-const RecipeCard = (props) => {
+const RecipeCard = ({ title, time, image}) => {
   return (
-    <div class="card">
-      <div class="image">
-        <img />
+    <div className="card">
+      <div className="image">
+        <img src={image} alt={title} />
       </div>
-      <div class="content">
-        <div class="header">Matt Giampietro</div>
-        <div class="meta">
-          <a>Friends</a>
-        </div>
-        <div className="description">Matthew is an interior.</div>
+      <div className="content">
+        <div className="header">{title}</div>
+
+        <div className="description">{time}</div>
       </div>
-      <div class="extra content">
-        <span class="right floated">Joined in 2013</span>
+      {/* <div className="extra content">
+        <span className="right floated">Joined in 2013</span>
         <span>
-          <i class="user icon"></i>
+          <i className="user icon"></i>
           75 Friends
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };

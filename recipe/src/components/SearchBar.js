@@ -13,6 +13,7 @@ export default class SearchBar extends React.Component {
   onSearchSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.state.term);
+    console.log(this.state.term);
   };
 
   render() {
@@ -21,13 +22,14 @@ export default class SearchBar extends React.Component {
     };
 
     return (
-      <form className="ui form">
+      <form className="ui form" onSubmit={this.onSearchSubmit}>
         <div className="field">
           <input
             type="text"
             style={inputStyle}
             onChange={this.onInputChange}
-          ></input>
+            value={this.state.term}
+          />
         </div>
       </form>
     );
