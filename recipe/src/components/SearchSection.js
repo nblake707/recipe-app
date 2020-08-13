@@ -36,7 +36,8 @@ export default class SearchSection extends React.Component {
   render() {
     return (
       <section className="search">
-        <h1>Find the perfect dish</h1>
+        <h1 className="perfectDish">Find the perfect dish</h1>
+        <div class="break"></div>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <RecipeList recipes={this.state.recipes} />
       </section>

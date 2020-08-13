@@ -22,7 +22,7 @@ export default class SearchBar extends React.Component {
     };
 
     return (
-      <form className="ui form" onSubmit={this.onSearchSubmit}>
+      <form id="search-form" className="ui form" onSubmit={this.onSearchSubmit}>
         <div className="field">
           <input
             type="text"
