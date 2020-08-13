@@ -9,24 +9,33 @@ export default class SearchSection extends React.Component {
     recipes: [],
   };
 
-  onSearchSubmit = async term => {
+  onSearchSubmit = async (term) => {
     // make axios call to recipe api
-    const response = await spoontacular.get("/complexSearch", {
-      params: {
+     await spoontacular
+      .get("/complexSearch", {
+        params: {
           query: term,
-          number: '9',
-          apiKey: "b8d5d1148038413aa09e4512c4718d6f"
-      },
-    });
+          number: "9",
+          addRecipeInformation: true,
+          apiKey: "b8d5d1148038413aa09e4512c4718d6f",
+        },
+      })
+      .then((res) => {
+        const data = res.data;
+        console.log(data);
+        this.setState({
+          recipes: res.data.results,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
-    this.setState({
-        recipes: response.data.items
-    });
   };
 
   render() {
     return (
-      <section className="search" id="search">
+      <section className="search">
         <h1>Find the perfect dish</h1>
         <SearchBar onSubmit={this.onSearchSubmit} />
         <RecipeList recipes={this.state.recipes} />

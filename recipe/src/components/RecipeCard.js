@@ -1,23 +1,27 @@
 import React from "react";
+import "./css/RecipeCard.css";
 
-const RecipeCard = ({ title, time, image}) => {
+const RecipeCard = ({ recipe }) => {
+
+  const sourceUrl = recipe.sourceUrl;
+  // .summary for full description
   return (
     <div className="card">
       <div className="image">
-        <img src={image} alt={title} />
+        <img src={recipe.image} alt={recipe.title} />
       </div>
       <div className="content">
-        <div className="header">{title}</div>
+        <div className="header">{recipe.title}</div>
 
-        <div className="description">{time}</div>
+        <div className="description">{recipe.time}</div>
       </div>
-      {/* <div className="extra content">
-        <span className="right floated">Joined in 2013</span>
+      <div className="extra content">
+        {/* <span className="right floated">Joined in 2013</span> */}
         <span>
-          <i className="user icon"></i>
-          75 Friends
+          <i className="time icon"></i>
+          {recipe.cookingMinutes} Minutes
         </span>
-      </div> */}
+      </div>
     </div>
   );
 };
