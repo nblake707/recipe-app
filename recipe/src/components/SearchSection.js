@@ -41,9 +41,9 @@ export default class SearchSection extends React.Component {
           <SearchBar onSubmit={this.onSearchSubmit} />
         </div>
 
-        <div className="search-content">
+        {/* <div className="search-content"> */}
           <RecipeList recipes={this.state.recipes} />
-        </div>
+      
       </section>
     );
   }

@@ -19,10 +19,11 @@ export default class SearchBar extends React.Component {
   render() {
     const inputStyle = {
       borderRadius: "500rem",
-    };
+      margin: "3%",
+    }
 
     return (
-      <form id="search-form" className="ui form" onSubmit={this.onSearchSubmit}>
+      <form className="ui form" onSubmit={this.onSearchSubmit}>
         <div className="field">
           <input
             type="text"
