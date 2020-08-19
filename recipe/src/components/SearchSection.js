@@ -11,7 +11,7 @@ export default class SearchSection extends React.Component {
 
   onSearchSubmit = async (term) => {
     // make axios call to recipe api
-     await spoontacular
+    await spoontacular
       .get("/complexSearch", {
         params: {
           query: term,
@@ -30,16 +30,20 @@ export default class SearchSection extends React.Component {
       .catch((error) => {
         console.log(error);
       });
-
   };
 
   render() {
     return (
       <section className="search">
-        <h1 className="perfectDish">Find the perfect dish</h1>
-        <div class="break"></div>
-        <SearchBar onSubmit={this.onSearchSubmit} />
-        <RecipeList recipes={this.state.recipes} />
+        
+        <div className="search-heading">
+          <h1 className="perfectDish">Find the perfect dish</h1>
+          <SearchBar onSubmit={this.onSearchSubmit} />
+        </div>
+
+        <div className="search-content">
+          <RecipeList recipes={this.state.recipes} />
+        </div>
       </section>
     );
   }

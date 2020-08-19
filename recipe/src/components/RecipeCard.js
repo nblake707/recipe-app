@@ -10,7 +10,7 @@ const RecipeCard = ({ recipe }) => {
   return (
     <div className="card">
       <div className="image">
-        <img className="resImage" src={recipe.image} alt={recipe.title} />
+        <img id="resImage" src={recipe.image} alt={recipe.title} />
       </div>
       <div className="content">
         <div className="header">{recipe.title}</div>
